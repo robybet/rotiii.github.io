@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Website</title>
+    <link rel="stylesheet" href="Asset/style.css">
+    
+</head>
+<body>
+    <header>
+          <h1 class="header-title">January</h1>
+          <h1 class="header-title2">19</h1>
+          <h1 class="header-title3">, 2024</h1>
+    </header>
+
+    <p class="special-text">"I knew" This is your special day</p>
+
+
+    <main>
+        <div class="tanggal">
+            <h1 class="anm">Happy Birthday!</h1>
+        </div>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="Asset/Img/1.jpg" alt="Photo 1">
+                <div class="text-overlay">
+                    <p>Happy Birthday!</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="Asset/Img/2.jpg" alt="Photo 2">
+                <div class="text-overlay">
+                    <p>Selamat Ulang Tahun</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="Asset/Img/3.jpg" alt="Photo 3">
+                <div class="text-overlay">
+                    <p>생일 축하해요</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="Asset/Img/4.jpg" alt="Photo 4">
+                <div class="text-overlay">
+                    <p>С днём рождения!</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="Asset/Img/5.jpg" alt="Photo 5">
+                <div class="text-overlay">
+                    <p>사랑해</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="Asset/Img/6.jpg" alt="Photo 6">
+                <div class="text-overlay">
+                    <p>¡Feliz cumpleaños!</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="Asset/Img/7.jpg" alt="Photo 7">
+                <div class="text-overlay">
+                    <p>Best wishes for you.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="Asset/Img/8.jpg" alt="Photo 8">
+                <div class="text-overlay">
+                    <p>Doa Terbaik Untukmu</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="Asset/Img/9.jpg" alt="Photo 9">
+                <div class="text-overlay">
+                    <p>최고의 행운을 빕니다</p>
+                </div>
+            </div>    
+        </div>    
+        
+         <div class="additional-text">
+            <h3>Today is your special day!</h3> 
+            <p>Selamat Ulang Tahun yang ke 20 Kak Rizky Vania Betarisanti (bagus banget namanya betew hehehe)
+
+                    Semoga di umur kakak yang udah masuk ke kepala dua ini, kakak senantiasa diberi kebahagiaan, kesehatan dan kesuksesan. semoga segala apa yang disemogakan kakak jadi kenyataan ya kakk. Aku selalu dukung kakakk.
+            </p>
+         </div>
+
+        <div class="confetti"></div>
+        <div class="audio-controls">
+            <audio id="happyBirthdayAudio" src="Asset/Piano.mp3" preload="auto"></audio>
+            <button onclick="playAudio()">Putar Lagu</button>
+            <button onclick="openNewPage()">Pecahin Semua Balon</button>
+        </div>
+        <div class="cake-popup" id="cakePopup">
+            <img src="Asset/FINL.gif" alt="Kue Ulang Tahun">
+        </div>
+
+        <footer>
+            <p>Dibuat oleh <a href="https://www.instagram.com/feelroby/">someone who will always be there for you.</a></p>
+        </footer>
+
+        <script>
+            function playAudio() {
+                var audio = document.getElementById('happyBirthdayAudio');
+                audio.play();
+                showCakePopup();
+            }
+    
+            function showCakePopup() {
+                var cakePopup = document.getElementById('cakePopup');
+                cakePopup.style.display = 'block';
+                setTimeout(function() {
+                    cakePopup.style.display = 'none';
+                }, 30000); // Tutup pop-up setelah 5 detik
+            }
+    
+            function openNewPage() {
+                window.open('https://gifft.me/id/d#EdxPWOhxBwGtG8pr9zZb', '_blank');
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+      var specialText = document.querySelector('.special-text');
+      var mainContent = document.querySelector('main');
+
+      specialText.addEventListener('animationend', function () {
+        specialText.style.opacity = 1; // Pastikan teks tetap terlihat setelah animasi selesai
+        setTimeout(function() {
+          specialText.style.animation = 'fadeOut 2s ease-in-out forwards'; // Animasi saat teks menghilang
+          setTimeout(function() {
+            specialText.style.display = 'none';
+            mainContent.style.display = 'block';
+          }, 2000); // Tetapkan durasi teks terlihat setelah animasi selesai (dalam milidetik)
+        }, 2000); // 2 detik delay sebelum animasi menghilang dimulai
+      });
+    });
+
+
+        </script>
+        
+    </main>
+</body>
+</html>
