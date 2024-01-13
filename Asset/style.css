@@ -53,7 +53,7 @@ header {
 
 .anm {
     opacity: 0;
-    animation: bounceIn .6s ease-in-out 3.7s forwards;
+    animation: bounceIn .6s ease-in-out 1.9s forwards;
     font-size:xx-large;
 
 }
@@ -104,7 +104,7 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeInDown .8s ease-in-out 2.9s forwards;
+    animation: fadeInDown .8s ease-in-out 1s forwards;
 }
 
 @keyframes fadeInDown {
@@ -347,3 +347,7 @@ footer a:hover {
     margin: 10px;
     line-height: 1.4;
   } */
+
+.coret {
+    text-decoration: line-through;
+  }
